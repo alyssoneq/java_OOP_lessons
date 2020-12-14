@@ -1,0 +1,44 @@
+- ideia principal
+
+	Construir programa usando conceitos e abstrações do mundo real, como
+objetos, troca de mensagens. 
+
+- principais conceitos:
+	* Coisas importantes do sistema = objetos
+	* Classe = repositório para comportamento associado a um objeto
+	* Classes são organizadas em hierarquia
+	* Células enviam mensagens para outras células para um objetivo
+	* Objetos executam tarefas por requisição de serviços a outros objetos
+	* Cada objeto pertence a uma determinada classe
+	* Classe pode agrupar objetos similares
+
+- Paradigma da programação orientada a objetos
+
+	Um programa é visto como um conjunto de objetos que se comunicam 
+através de mensagens. 
+
+	Fundamentada em 4 pilares do princípio da abstração:
+		* Encapsulamento
+		* Herança
+		* Composição
+		* Polimorfismo
+
+	Princípio da abstração:
+		* Capacidade de abstrair complexidade em partes menores
+
+- Objetos
+
+	São usados para representar entidades do mundo real ou computacional.
+Objetos representam elementos e abstraçoes que fazem parte da solução do programa
+Exemplos: Pessoas, carros, móveis...
+
+	As características dos objetos são chamadas de atributos. Exemplo:
+Pessoa --> RG, CPF, nome. Carro --> cor, modelo, ano. Objetos podem ter comportamentos
+associados, como andar, correr, ligar, acelerar...
+	Características = dados ou atributos
+	Comportamentos = métodos ou operações
+
+- Classes
+
+	Conjunto de objetos com atributos e métodos semelhantes. É um molde  para
+a criação de um dado objeto. Objetos são instâncias das classes. 
