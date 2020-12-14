@@ -41,4 +41,47 @@ associados, como andar, correr, ligar, acelerar...
 - Classes
 
 	Conjunto de objetos com atributos e métodos semelhantes. É um molde  para
-a criação de um dado objeto. Objetos são instâncias das classes. 
+a criação de um dado objeto. Objetos são instâncias das classes.
+
+	Sintaxe de uma classe:
+
+	class Carro{
+		String tipo;
+		String cor;
+		String placa;
+	}
+
+	Regras para escolher nome do atributo:
+		* sequencia de letras unicode e dígitos
+		* inicia sempre com letra, $ ou _
+		* aceita letras, dígitos, $ e _
+		* espaços não são permitidos
+		* não permitido palavras reservadas:
+			@float
+			@void
+			@class
+			@int
+			@for
+			@while...
+		* case sensitive
+		* utilizar nomes completos para facilitar compreensão
+
+- Métodos
+
+	A palavra "this" é adicionada antes do atributo --> representa a
+instância da classe. Informa ao compilador a referência ao atributo da classe.
+
+Boa prática:
+	* sempre usar a palavra this antes do atributo
+	* essa prática evita problema de ambiguidade
+	* isso é feito pois o compilador prioza parâmetro do método
+
+Sintaxe básica de um método contém:
+	*tipo de acesso ao método (public, private, protected)
+	*nome do método
+	*tipo de retorno (objeto ou primitivo)
+	*um ou mais parâmetros
+	*corpo do método
+
+
+
