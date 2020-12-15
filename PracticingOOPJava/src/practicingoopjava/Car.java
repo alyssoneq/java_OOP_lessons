@@ -21,33 +21,26 @@ public class Car {
     String color;
     int numberOfDoors;
     
-    // Defining the methods to set and get every attribute
-    void setBrand(String brand){
+    // Creating a constructor for this class
+    public Car(String brand, String plate, String color, int numberOfDoors){
         this.brand = brand;
+        this.plate = plate;
+        this.color = color;
+        this.numberOfDoors = numberOfDoors;
     }
+    
+    // Defining the methods to get every attribute
     
     String getBrand(){
         return this.brand;
-    }
-    
-    void setPlate(String plate){
-        this.plate = plate;
-    }
-    
+    }   
+   
     String getPlate(){
         return this.plate;
     }
     
-    void setColor(String color){
-        this.color = color;
-    }
-    
     String getColor(){
         return this.color;
-    }
-    
-    void setNumberOfDoors(int numberDoors){
-        this.numberOfDoors = numberDoors;
     }
     
     int getNumberOfDoors(){

@@ -24,10 +24,9 @@ public class Main {
          */
         
         // Instance of an object
-        Car yourCar = new Car();
+        Car yourCar = new Car("Toyota","TRY-4455","dark green",4);
         
         // Testing a method
-        yourCar.setColor("Black");
         System.out.println("The color of your car is: "+yourCar.getColor());
     }
     
