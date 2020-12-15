@@ -25,9 +25,16 @@ public class Main {
         
         // Instance of an object
         Car yourCar = new Car("Toyota","TRY-4455","dark green",4);
+        Car twoDoorCar = new Car("Ferrari", "ENZ-0254", "Red");
         
         // Testing a method
         System.out.println("The color of your car is: "+yourCar.getColor());
+        System.out.println("There is a supercar in store");
+        System.out.println("Characteristics:");
+        System.out.println(" - Brand: "+twoDoorCar.brand+
+                           "\n - Plate: "+twoDoorCar.plate+
+                           "\n - Color: "+twoDoorCar.color+
+                           "\n - Number of doors: "+twoDoorCar.numberOfDoors);
     }
     
 }

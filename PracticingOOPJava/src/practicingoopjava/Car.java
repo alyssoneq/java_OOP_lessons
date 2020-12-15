@@ -21,12 +21,24 @@ public class Car {
     String color;
     int numberOfDoors;
     
-    // Creating a constructor for this class
+    /**
+     * Creating a constructor for this class
+     * The constructor has to be the same name of the class
+     * 
+     */
     public Car(String brand, String plate, String color, int numberOfDoors){
         this.brand = brand;
         this.plate = plate;
         this.color = color;
         this.numberOfDoors = numberOfDoors;
+    }
+    
+    // Constructor overloading
+    public Car(String brand, String plate, String color){
+        this.brand = brand;
+        this.plate = plate;
+        this.color = color;
+        this.numberOfDoors = 2;
     }
     
     // Defining the methods to get every attribute
