@@ -20,17 +20,19 @@ public class Car {
     String plate;
     String color;
     int numberOfDoors;
+    Person person;
     
     /**
      * Creating a constructor for this class
      * The constructor has to be the same name of the class
      * 
      */
-    public Car(String brand, String plate, String color, int numberOfDoors){
+    public Car(String brand, String plate, String color, int numberOfDoors, Person person){
         this.brand = brand;
         this.plate = plate;
         this.color = color;
         this.numberOfDoors = numberOfDoors;
+        this.person = person;
     }
     
     // Constructor overloading

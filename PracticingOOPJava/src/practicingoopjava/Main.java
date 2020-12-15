@@ -23,12 +23,15 @@ public class Main {
          * 
          */
         
-        // Instance of an object
-        Car yourCar = new Car("Toyota","TRY-4455","dark green",4);
+        // Instance of the objects
+        Person you = new Person("John Wick", 35, "Male");
+        Car yourCar = new Car("Toyota", "TRY-4455", "dark green", 4, you);
         Car twoDoorCar = new Car("Ferrari", "ENZ-0254", "Red");
         
-        // Testing a method
+        // Testing the methods and classes
+        System.out.println("Hello, "+you.name);
         System.out.println("The color of your car is: "+yourCar.getColor());
+        System.out.println("");
         System.out.println("There is a supercar in store");
         System.out.println("Characteristics:");
         System.out.println(" - Brand: "+twoDoorCar.brand+
