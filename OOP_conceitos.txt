@@ -83,5 +83,25 @@ Sintaxe básica de um método contém:
 	*um ou mais parâmetros
 	*corpo do método
 
+- Encapsulamento
+
+	Característica de ocultar partes(dados e detalhes) de implementação 
+interna de classes. Permite ver as classes apenas pelos serviços (métodos)
+oferecidos. Define as interações com os objetos da classe.
+	Objeto só disponibiliza, por meio da interface, os serviços que recebem
+solicitações de outros objetos. 
+
+- Modificadores de acesso
+
+	Palavras reservadas que permitem ou proibem o acesso aos atributos e/ou
+métodos das classes
+
+public: acesso ou execução a partir de qualquer outra classe
+
+private: acesso, modificação ou execução apenas por métodos da mesma classe
+
+protected: funciona como private, mas classes filhas ou derivadas têm acesso
+
+package ou friendly: atributo ou método sem modificador. Acesso a tudo no pacote
 
 
