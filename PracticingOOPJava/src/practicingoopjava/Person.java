@@ -14,10 +14,10 @@ package practicingoopjava;
  * @author Alysson Bruno
  */
 class Person {
-   String name;
-   int age;
-   String gender;
-   Car car;
+   private String name;
+   private int age;
+   private String gender;
+   private Car car;
    
    // Construct to define the attributes of a person
    public Person(String name, int age , String gender){
@@ -28,6 +28,11 @@ class Person {
    
    public Person(String name){
        this.name = name;
+   }
+   
+   // Method to get a person name
+   public String getName(){
+       return this.name;
    }
    
    // Method to determine a person car

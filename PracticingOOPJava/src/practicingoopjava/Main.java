@@ -26,15 +26,15 @@ public class Main {
         Car twoDoorCar = new Car("Ferrari", "ENZ-0254", "Red");
         
         // Testing the methods and classes
-        System.out.println("Hello, "+you.name);
+        System.out.println("Hello, "+you.getName());
         System.out.println("The color of your car is: "+yourCar.getColor());
         System.out.println("");
         System.out.println("There is a supercar in store");
         System.out.println("Characteristics:");
-        System.out.println(" - Brand: "+twoDoorCar.brand+
-                           "\n - Plate: "+twoDoorCar.plate+
-                           "\n - Color: "+twoDoorCar.color+
-                           "\n - Number of doors: "+twoDoorCar.numberOfDoors);
+        System.out.println(" - Brand: "+twoDoorCar.getBrand()+
+                           "\n - Plate: "+twoDoorCar.getPlate()+
+                           "\n - Color: "+twoDoorCar.getColor()+
+                           "\n - Number of doors: "+twoDoorCar.getNumberOfDoors());
         
         // Test drive of the car
         you.startEngine();

@@ -16,12 +16,12 @@ package practicingoopjava;
  */
 public class Car {
     // Defining the attributes
-    String brand;
-    String plate;
-    String color;
-    int numberOfDoors;
-    Person person;
-    int shift;
+    private String brand;
+    private String plate;
+    private String color;
+    private int numberOfDoors;
+    private Person person;
+    private int shift;
     
     /**
      * Creating a constructor for this class
@@ -46,19 +46,19 @@ public class Car {
     
     // Defining the methods to get every attribute
     
-    String getBrand(){
+    public String getBrand(){
         return this.brand;
     }   
    
-    String getPlate(){
+    public String getPlate(){
         return this.plate;
     }
     
-    String getColor(){
+    public String getColor(){
         return this.color;
     }
     
-    int getNumberOfDoors(){
+    public int getNumberOfDoors(){
         return this.numberOfDoors;
     }
     
@@ -83,7 +83,7 @@ public class Car {
         this.shift = shift;
     }
     
-    int getshift(){
+    public int getshift(){
         return this.shift;
     }
 }
