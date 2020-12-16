@@ -16,16 +16,13 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        /**
-         * 1- Object creation
-         * 2- data manipulation
-         * 3- Program ending
-         * 
-         */
-        
-        // Instance of the objects
+        // Instance of a person
         Person you = new Person("John Wick", 35, "Male");
-        Car yourCar = new Car("Toyota", "TRY-4455", "dark green", 4, you);
+        //Instance of a car
+        Car yourCar = new Car("Toyota", "TRY-4455", "dark green", 4);
+        // Determining the owner of the car
+        you.setCar(yourCar);
+        // Instance of a new car
         Car twoDoorCar = new Car("Ferrari", "ENZ-0254", "Red");
         
         // Testing the methods and classes
@@ -38,6 +35,24 @@ public class Main {
                            "\n - Plate: "+twoDoorCar.plate+
                            "\n - Color: "+twoDoorCar.color+
                            "\n - Number of doors: "+twoDoorCar.numberOfDoors);
+        
+        // Test drive of the car
+        you.startEngine();
+        you.setShiftCar(1);
+        you.accelerateCar();
+        you.setShiftCar(2);
+        you.accelerateCar();
+        you.setShiftCar(3);
+        you.accelerateCar();
+        you.setShiftCar(2);
+        you.accelerateCar();
+        you.setShiftCar(1);
+        you.accelerateCar();
+        you.setShiftCar(0);
+        you.accelerateCar();
+        you.breakCar();
+        you.stopEngine();
+        
     }
     
 }
