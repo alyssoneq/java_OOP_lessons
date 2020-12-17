@@ -105,3 +105,18 @@ protected: funciona como private, mas classes filhas ou derivadas têm acesso
 package ou friendly: atributo ou método sem modificador. Acesso a tudo no pacote
 
 
+- Composição ou agregação
+
+	Mecanismos de reaproveitamento de classes. Visa aumentar produtividade
+e qualidade no desenvolvimento de software
+
+Reaproveitamento:
+	* usar uma ou varias classes para compor outra classe
+
+Aumento de produtividade:
+	* Não necessidade de reescrever código
+
+Aumento de qualidade:
+	* Reutilizar classe já testada reduz chance de erro
+
+
