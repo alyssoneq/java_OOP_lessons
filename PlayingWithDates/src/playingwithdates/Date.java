@@ -19,42 +19,52 @@ public class Date {
    private int month; 
    private int year;
    
+   //Instance of the ValidateDate
+   ValidateDate validationProcess = new ValidateDate();
+   
    // Constructor to get all 3 attributes
    public Date(int day, int month, int year){
-       this.day = day;
-       this.month = month;
-       this.year = year;
+       //Validation of the input data
        
-       validateDate();
-   }
-   
-   //Constructor to get current date
-   public Date(){
-       this.day = LocalDate.now().getDayOfYear();
-       this.month = LocalDate.now().getMonthValue();
-       this.month = LocalDate.now().getYear();
-   }
-
-   // Method to validate input data 
-   private void validateDate() {
-        if (this.day < 1 || this.day > 31 || this.month < 1 || this.month > 12 || this.year < 1  ) {
-            System.out.println("Valid date. Thank you!!!");
-       } else {
-            System.out.println("Invalid date");
+       if (validationProcess.validation(day, month, year)){
+            this.day = day;
+            this.month = month;
+            this.year = year;
+       }else{
+           this.day = 0;
+           this.month = 0;
+           this.year = 0;
+           
+           // Alert of invalid date format
+           System.out.println("Invalid date format");
        }
+    }
+   
+   //Constructor to get current date of the system
+   public Date(){
+       // Using LocalDate to get the system's date
+       this.day = LocalDate.now().getDayOfMonth();
+       this.month = LocalDate.now().getMonthValue();
+       this.year = LocalDate.now().getYear();
    }
    
    // Methods to set day, month and year
    public void setDay(int day){
-       this.day = day;
+       if(validationProcess.validation(day, this.month, this.year)){
+            this.day = day;
+       }
    }
    
    public void setMonth(int month){
-       this.month = month;
+       if(validationProcess.validation(this.day, month, this.year)){
+            this.month = month;
+       }
    }
    
    public void setYear(int year){
-       this.year = year;
+       if(validationProcess.validation(this.day, this.month, year)){
+            this.year = year;
+       }
    }
    
    // Methods to get day, month and year
@@ -77,6 +87,18 @@ public class Date {
    
    // Method to one day forward
    public void oneDayForward(){
-       this.day += 1;
+       int newDay = this.day + 1;
+       if (validationProcess.validation(newDay, this.month, this.year)) {
+           setDay(newDay);
+       } else {
+           int newMonth = this.month + 1;
+           if(validationProcess.validation(1, newMonth, this.year)){
+               setMonth(newMonth);
+           } else{
+               setDay(1);
+               setMonth(1);
+               setYear(this.year + 1);
+           }
+       }
    }
 }
