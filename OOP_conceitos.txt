@@ -120,3 +120,40 @@ Aumento de qualidade:
 	* Reutilizar classe já testada reduz chance de erro
 
 
+- Herança
+
+	Mecanismo que permite uma classe herdar todos atributos e métodos de 
+outra classe. 
+
+	hierarquia de classe: mapeamento do relacionamentos entre as classes.
+Quanto mais alta na hierarquia, mais abstrata. 
+
+Termos para quem fornece a herança:
+	* superclasse
+	* mãe
+	* tipo
+
+Termos para quem herda:
+	* subclasse
+	* filha
+	* subtipo
+
+Outros termos:
+	* Ancestral --> classe acima da progenitora (mãe)
+	* Descendente --> classe abaixo da atual
+	* Raiz ou base --> classe do topo da hierarquia
+	* Folha --> classe sem filhas
+
+	A classe filha não pode remover os atributos e métodos da mãe. 
+
+Generalização --> classes abstratas e mais genéricas
+
+especialização --> classes em posições inferiores na hierarquia / mais detalhes
+
+herança multipla --> classe herda mais de uma superclasse
+
+herança simples --> cada classe só tem uma superclasse
+
+	Em java:
+	   * interfaces --> herança multipla
+	   * extends --> herança simples
