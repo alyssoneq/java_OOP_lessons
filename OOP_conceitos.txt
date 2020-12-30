@@ -1,4 +1,4 @@
-- ideia principal
+- IDEIA CENTRAL DA PROGRAMAÇÃO ORIENTADA A OBJETOS
 
 	Construir programa usando conceitos e abstrações do mundo real, como
 objetos, troca de mensagens. 
@@ -12,7 +12,7 @@ objetos, troca de mensagens.
 	* Cada objeto pertence a uma determinada classe
 	* Classe pode agrupar objetos similares
 
-- Paradigma da programação orientada a objetos
+- PARADIGMA DA OOP
 
 	Um programa é visto como um conjunto de objetos que se comunicam 
 através de mensagens. 
@@ -26,7 +26,7 @@ através de mensagens.
 	Princípio da abstração:
 		* Capacidade de abstrair complexidade em partes menores
 
-- Objetos
+- OBJETOS
 
 	São usados para representar entidades do mundo real ou computacional.
 Objetos representam elementos e abstraçoes que fazem parte da solução do programa
@@ -38,7 +38,7 @@ associados, como andar, correr, ligar, acelerar...
 	Características = dados ou atributos
 	Comportamentos = métodos ou operações
 
-- Classes
+- CLASSES
 
 	Conjunto de objetos com atributos e métodos semelhantes. É um molde  para
 a criação de um dado objeto. Objetos são instâncias das classes.
@@ -66,7 +66,7 @@ a criação de um dado objeto. Objetos são instâncias das classes.
 		* case sensitive
 		* utilizar nomes completos para facilitar compreensão
 
-- Métodos
+- MÉTODOS
 
 	A palavra "this" é adicionada antes do atributo --> representa a
 instância da classe. Informa ao compilador a referência ao atributo da classe.
@@ -83,7 +83,7 @@ Sintaxe básica de um método contém:
 	*um ou mais parâmetros
 	*corpo do método
 
-- Encapsulamento
+- ENCAPSULAMENTO
 
 	Característica de ocultar partes(dados e detalhes) de implementação 
 interna de classes. Permite ver as classes apenas pelos serviços (métodos)
@@ -91,7 +91,7 @@ oferecidos. Define as interações com os objetos da classe.
 	Objeto só disponibiliza, por meio da interface, os serviços que recebem
 solicitações de outros objetos. 
 
-- Modificadores de acesso
+- MODIFICADORES DE ACESSO
 
 	Palavras reservadas que permitem ou proibem o acesso aos atributos e/ou
 métodos das classes
@@ -105,7 +105,7 @@ protected: funciona como private, mas classes filhas ou derivadas têm acesso
 package ou friendly: atributo ou método sem modificador. Acesso a tudo no pacote
 
 
-- Composição ou agregação
+- COMPOSIÇÃO OU AGREGAÇÃO
 
 	Mecanismos de reaproveitamento de classes. Visa aumentar produtividade
 e qualidade no desenvolvimento de software
@@ -120,7 +120,7 @@ Aumento de qualidade:
 	* Reutilizar classe já testada reduz chance de erro
 
 
-- Herança
+- HERANÇA
 
 	Mecanismo que permite uma classe herdar todos atributos e métodos de 
 outra classe. 
@@ -157,3 +157,98 @@ herança simples --> cada classe só tem uma superclasse
 	Em java:
 	   * interfaces --> herança multipla
 	   * extends --> herança simples
+
+O modificador protected pode ser utilizado para liberar acesso às classes
+filhas, porém negar acesso à classe main
+
+
+palavra reservada super() --> utilizada para chamar classe mãe logo acima
+
+caso super() seja utilizado em uma classe mãe raiz, então a classe Object é
+chamada, pois a classe Object é ancestral de todas as classes.
+
+Dicas para utilizar o super():
+	* apenas comentários antes da palavra super dentro de construtores
+	* super pode ser usado para acessar atributos da classe
+
+
+- POLIMORFISMO
+
+	é a habilidade de objetos de classes diferentes responderem a mesma
+mensagem de diferentes maneiras.
+	
+- tipos de polimorfismo:
+	* sobrecarga
+	* sobreposição
+	* inclusão
+
+- polimorfismo de sobrecarga:
+	* método tem comportamento distinto, em função de parâmetros recebidos
+	* cada método difere no número e no tipo de parâmetros
+	* normalmente acontece sobre métodos construtores
+	* conversão --> capacidade de um tipo ser convertido em outro
+	* java converte um tipo de dado em outro sempre que apropriado
+	* conversão automática ocorrem quando há garantia de não haver perda
+	  de informação
+	* Não confundi conversão com polimorfismo
+
+- polimorfismo de sobreposição:
+	* redefinição de métodos em classes descendentes
+	* método em classe filha com mesmo nome de método da classe mãe
+
+- polimorfismo de inclusão:
+	* usa a capacidade de substituição da herança
+	* subsitui classe mãe por filha
+	* capacidade de objeto receber qualquer objeto de subclasses da mãe
+
+
+- COLLECTIONS E ARRAYS
+
+	Array é o conjunto de valores do mesmo tipo, ou seja, type-safe ou 
+de tipagem forte ou fortemente tipado. 
+
+syntax de declaração array unidimensional:
+	double[] nomeArray = new double[númeroDeElementos];
+
+- dimensão de array:
+	* Conjunto de valores definidos para localizar uma informação
+	 
+syntax de declaração array bidimensional:
+	double[][] nomeArray = new double[][];
+
+	Array são estruturas para armazenar objetos. Array também é um objeto.
+Por ser um objeto, o array possui métodos e atributos úteis.
+	Um atributo muito útil é o length --> bastante utilizado para determinar
+comprimento do array, então basilar limite de processamento
+
+- collections:
+	* conjunto de classes para armazenar varios objetos na memória
+	* não tem tamanho nem tipo fixos
+
+- tipo de collections:
+	* List --> lista de coisas
+	* Set --> lista que não permite repetição de elementos
+	* map --> lista de coisas com identificador único
+
+	hashCode --> mecanismo de ordenação e recuperação de dados. Permite
+pesquisa de maneira rápida.
+
+- generics:
+	* sintaxe Generics força uma coleção a receber um único tipo de dado
+	* garante que tudo retornado é do tipo determinado
+	
+	sintaxe do generics:
+		List<String> myList = new ArrayList<String>();
+
+- ENHANCED LOOP
+
+	Maneira de percorrer uma coleção. É uma versão aprimorada do loop for.
+
+- syntax:
+	for(tipo declaração : expressão){
+	    corpo do loop
+	}
+
+	declaração --> variável utilizada no corpo do loop
+	expressão --> array ou coleção para iterar
+
