@@ -1,0 +1,52 @@
+- HIERARQUIA DE EXCEÇÕES
+
+	Exception é uma ocorrência que altera o fluxo normal da execução de
+um programa
+
+	O objeto Object tem um objeto chamado Throwable que deriva-se em 2 
+classe chamadas Error e Exception. A exception é um objeto do tipo Exception,
+logo quando ocorre uma falha receberemos um objeto como resposta.
+
+	Classes que derivam de Error --> indica coisa anormal durante execução
+
+	Classe que derivam de Exception --> ocorre por recurso nao disponível ou
+quando outra condição necessária não está presente.
+
+- TRATAMENTO DE EXCEÇÕES
+
+	É feito para ser clean, intuitivo e transparante para o programador.
+Desenvolvedor deve saber quando está chamando um método que possa levar a uma
+exceção, assim pode escrever código para lidar com essas possibilidades.
+
+sintaxe para informar o compilador que método pode causar exceção:
+
+	public static Class object() throws Exception {}
+
+sintaxe para tratar código com risco de gerar exceção:
+
+	try{
+	    Corpo do código
+	} catch ( Exception ex){
+	    Corpo da resposta à exceção
+	}
+
+	Tudo capturado na cláusula catch é um objeto.
+
+- TIPO DE EXCEÇÕES
+
+	Exception:
+		* IOException (checked exception - compilador confere)
+		* InterruptedException (checked exception - compilador confere)
+		* RuntimeException (unchecked exception)
+	
+	A maioria das RuntimeException são derivadas de problemas no seu código.
+É desejável RuntimeException durante o desenvolvimento, e não em bloco try/catch.
+Bloco try/catch é feito para capturar condições excepcionais e não fluxo 
+de código. Use a clásula catch para se recuperar de situações que você não pode
+garantir que irá acontecer com sucesso, ou para exibir mensagem com pilha de 
+erro, visando facilitar diagnóstico.
+
+	Exemplo de RuntimeException --> NullPointerException (referencia nula)
+
+
+
